@@ -1,0 +1,9 @@
+{
+  "id": "school-download-panel",
+  "name": "School Download Panel",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Browse semesters, courses, and Moodle files in a panel and download files into the right course folders.",
+  "author": "Codex",
+  "isDesktopOnly": true
+}

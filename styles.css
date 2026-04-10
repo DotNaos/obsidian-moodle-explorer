@@ -1,0 +1,140 @@
+.school-download-panel-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 0.75rem;
+}
+
+.school-download-panel-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.school-download-panel-toolbar-text {
+  color: var(--text-normal);
+  font-size: var(--font-ui-medium);
+  font-weight: 600;
+}
+
+.school-download-panel-tree {
+  overflow: auto;
+  padding-bottom: 1rem;
+}
+
+.school-download-panel-empty,
+.school-download-panel-error {
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  line-height: 1.5;
+  padding: 0.5rem 0;
+}
+
+.school-download-panel-node {
+  display: flex;
+  flex-direction: column;
+}
+
+.school-download-panel-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 30px;
+  padding: 0.25rem 0.25rem 0.25rem 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.school-download-panel-row:hover {
+  background: color-mix(in srgb, var(--background-modifier-hover) 78%, transparent);
+}
+
+.school-download-panel-row.is-remote .school-download-panel-name {
+  color: color-mix(in srgb, var(--text-muted) 88%, var(--background-primary));
+  opacity: 0.72;
+}
+
+.school-download-panel-row.is-remote .school-download-panel-item-icon {
+  opacity: 0.6;
+}
+
+.school-download-panel-row.is-remote:hover .school-download-panel-name,
+.school-download-panel-row.is-remote:hover .school-download-panel-item-icon {
+  color: var(--text-normal);
+  opacity: 0.92;
+}
+
+.school-download-panel-toggle {
+  width: 1rem;
+  min-width: 1rem;
+  height: 1rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.school-download-panel-toggle.is-leaf {
+  opacity: 0;
+}
+
+.school-download-panel-item-icon {
+  width: 1rem;
+  min-width: 1rem;
+  height: 1rem;
+  color: var(--icon-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.school-download-panel-item-icon.is-spinning {
+  animation: school-download-panel-spin 1s linear infinite;
+}
+
+.school-download-panel-label {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.school-download-panel-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.school-download-panel-meta {
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  white-space: nowrap;
+}
+
+.school-download-panel-children {
+  margin-left: 1rem;
+  padding-left: 0.25rem;
+  border-left: 1px solid var(--background-modifier-border);
+}
+
+.school-download-panel-status {
+  color: var(--text-error);
+  font-size: var(--font-ui-smaller);
+  padding: 0 0 0.5rem 2.5rem;
+}
+
+.school-download-panel-row.is-busy .school-download-panel-name,
+.school-download-panel-row.is-busy .school-download-panel-item-icon {
+  opacity: 0.75;
+}
+
+@keyframes school-download-panel-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
