@@ -11,6 +11,15 @@ This repository is intentionally standalone so it can be shared and installed th
 - opens files directly when they are already present in the vault
 - refreshes Moodle login from inside Obsidian
 
+## Requirement
+
+You must have the `moodle` CLI installed and available on your machine.
+This plugin does not talk to Moodle on its own. It uses the existing `moodle` command for login refresh, file listing, and downloads.
+
+Recommended source:
+
+- [`DotNaos/moodle-cli`](https://github.com/DotNaos/moodle-cli)
+
 ## Development
 
 Install dependencies:
