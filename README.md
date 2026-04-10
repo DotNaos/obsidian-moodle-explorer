@@ -51,6 +51,8 @@ Then reload Obsidian.
 The goal of this standalone repo is simple BRAT installation from GitHub later on.
 For that, keep `manifest.json`, `main.js`, and `styles.css` at the repo root.
 
+Pushes to `main` automatically create a GitHub beta release with the plugin assets attached for BRAT.
+
 ## Verify against a vault
 
 ```sh

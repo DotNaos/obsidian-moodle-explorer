@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node esbuild.mjs",
     "check": "tsc --noEmit",
+    "prepare-release": "node scripts/prepare-release.mjs",
     "verify": "tsx scripts/verify.ts"
   },
   "devDependencies": {
