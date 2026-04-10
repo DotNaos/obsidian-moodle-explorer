@@ -34,9 +34,10 @@ jobs:
       - name: Prepare release assets
         id: prepare
         run: |
-          RELEASE_SUFFIX="beta.${GITHUB_RUN_NUMBER}" npm run prepare-release > release.json
+          RELEASE_SUFFIX="beta.${GITHUB_RUN_NUMBER}" node scripts/prepare-release.mjs > release.json
           cat release.json
-          echo "version=$(node -p "JSON.parse(require('fs').readFileSync('release.json', 'utf8')).version")" >> "$GITHUB_OUTPUT"
+          VERSION=$(node -e "const fs = require('fs'); console.log(JSON.parse(fs.readFileSync('release.json', 'utf8')).version)")
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
 
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
